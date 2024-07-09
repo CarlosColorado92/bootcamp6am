@@ -1,10 +1,10 @@
-/* PALETA DE COLORES GEEBRAL */
+/* PALETA DE COLORES GENERAL - modify */
 :root{
 	--primario:#ffc107;
-	--oscuro:#222121;
-	--blanco:#ffffff;
-	--secundario:#0097A7;
-	--gris:#757575;
+	--oscuro: #212121;
+	--blanco: #ffffff;
+	--secundario: #0097A7;
+	--gris: #757575;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -17,20 +17,21 @@ html {
 
 body{
 	font-size: 16px; /* 1 rem = 16px */
-	font-family: "krub", Verdana, Arial, Helvetica, sans-serif;
-
+	font-family: "Krub", Verdana, Arial, Helvetica, sans-serif;
 	background-image: linear-gradient(to top, #dfe9f3, var(--blanco));
+/*	background-image: linear-gradient(to left, red, yellow);*/
+/*	background-image: radial-gradient(circle, red, yellow, green);*/
 }
 
-h1{	
+h1{
 	font-size: 2.8rem;
 }
 
-h2{	
+h2{
 	font-size: 2.4rem;
 }
 
-h3{	
+h3{
 	font-size: 1.8rem;
 }
 
@@ -38,33 +39,34 @@ h1, h2, h3{
 	text-align: center;
 }
 
+
 .subtitulo span{
-  	 font-size: 1.5rem;
- 	 color:#ff0000;
- }			
+	font-size: 1.5rem;
+	color: #ff0000;
+}
 
 .subtitulo{
- 	 color:var(--secundario);
- 	 font-size: 2rem;
- }
+	color:var(--secundario);
+	font-size: 2rem; 
+}
 
-.titulo{ 
-	color:var(--oscuro);
-	text-align:center;
- }
+.titulo{
+	color: var(--oscuro);
+	text-align: center;
+}
 
 .titulo-small{
- 	font-size: 2rem;
- }
+	font-size: 2rem;
+}
 
-h2.subtitulo span{	
+h2.subtitulo span{
 	font-size: 1.2rem;
- 	 color:#00FF00;
+	color: #00FF00;
 }
 
 .contenedor{
 	max-width: 80rem;
-	/*centrado*/
+	/* centrado */
 	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
@@ -72,11 +74,11 @@ h2.subtitulo span{
 }
 
 .sombra{
-	/* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5); */
+/*		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);	*/
 	-webkit-box-shadow: 0px 5px 15px 0px rgba(82,79,82,1);
 	-moz-box-shadow: 0px 5px 15px 0px rgba(82,79,82,1);
 	box-shadow: 0px 5px 15px 0px rgba(82,79,82,1);
-	
+
 	background-color: var(--blanco);
 	padding: 2rem;
 	border-radius: 1rem;
@@ -87,7 +89,7 @@ h2.subtitulo span{
 }
 
 .navegacion-principal{
-	display: flex;
+	display:flex;
 	flex-direction: column;
 }
 
@@ -101,25 +103,28 @@ h2.subtitulo span{
 }
 
 .navegacion-principal a:hover{
-	background-color: var(--primario) ;
+	background-color: var(--primario);
 	color: var(--oscuro);
 }
 
 .hero{
 	background-image: url(../images/hero.jpg);
-	background-repeat: no-repeat ;
+	background-repeat: no-repeat;
 	background-size: cover;
 	height: 450px;
 	padding: 20px;
 	position: relative;
+
 	margin-bottom: 2rem;
 }
 
 .contenido-hero{
 	position: absolute;
-	background-color: rgba(0, 0, 0,.7);
-	top: 0;
-	left: 0;
+
+	/* hacer una transparencia */
+	background-color: rgba(0,0,0, .7);
+	top:0;
+	left:0;
 	bottom: 0;
 	right: 0;
 	display: flex;
@@ -141,6 +146,7 @@ h2.subtitulo span{
 	border-radius: 5px;
 	font-size: 1.2rem;
 	font-weight: bold;
+
 	border: none;
 }
 
@@ -148,25 +154,27 @@ h2.subtitulo span{
 	cursor: pointer;
 }
 
-
-/*seccion de servicios */
-.servicio {
+/* seccion de servicios */
+.servicio{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 }
+
 .servicio h3{
 	color: var(--secundario);
 	font-weight: normal;
 }
+
 .servicio p{
 	color: var(--oscuro);
-	text-align: center ;
+	text-align: center;
 	line-height: 2;
 }
 
 .servicio .icono{
-	height: 150px ;
+	height: 150px;
 	width: 150px;
 	background-color: var(--primario);
 	border-radius: 50%;
@@ -174,6 +182,7 @@ h2.subtitulo span{
 	justify-content: space-evenly;
 	align-items: center;
 }
+
 
 /* estilos para el formulario de contacto */
 .formulario{
@@ -195,7 +204,7 @@ h2.subtitulo span{
 	color: var(--primario);
 	text-align: center;
 	font-size: 1.8rem;
-	text-transform: uppercase; /*cambiar a mayuscula*/
+	text-transform: uppercase;
 	font-weight: bold;
 	margin-bottom: 2rem;
 }
@@ -203,6 +212,7 @@ h2.subtitulo span{
 .campo{
 	margin-bottom: 1rem;
 }
+
 
 .campo label{
 	color: var(--blanco);
@@ -235,6 +245,15 @@ h2.subtitulo span{
 	text-transform: uppercase;
 }
 
+/* estilo para el envio correcto del formulario */
+.correcto{
+	background-color: rgb(74,185,0);
+	text-align: center;
+	padding: 1rem;
+	color: var(--blanco);
+	text-transform: uppercase;
+}
+
 /* pie de pagina */
 .footer{
 	text-align: center;
@@ -245,6 +264,7 @@ h2.subtitulo span{
 
 /* vista celular */
 @media (min-width: 480px){
+
 }
 
 /* vista tablet */
@@ -253,10 +273,11 @@ h2.subtitulo span{
 		flex-direction: row;
 		justify-content: space-between;
 	}
+
 	.servicios{
-		display: grid;
+		display:grid;
 		grid-template-columns: 33% 33% 33%;
-		column-gap: 1rem
+		column-gap: 1rem;
 	}
 
 	.contenedor-campos{
@@ -265,16 +286,18 @@ h2.subtitulo span{
 		grid-template-rows: auto auto 15rem;
 		column-gap: 1rem;
 	}
-	
+
 	.campo:nth-child(3), .campo:nth-child(4){
 		grid-column: 1 / 3;
 	}
 }
 
 /* portatil */
-@media (min-width: 1140px ){
-}
-/* escritorio */
+@media (min-width: 1140px){
 
-@media (min-width: 1400px ){
+}
+
+/*  escritorio */
+@media (min-width: 1400px){
+
 }
